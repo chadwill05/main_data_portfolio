@@ -30,29 +30,29 @@ def home():
     return render_template('index.html')
 
 
-#app.route('/resume')
-#ef resume():
-#   return render_template('resume.html')
+@app.route('/resume')
+def resume():
+   return render_template('resume.html')
 
-#app.route('/projects')
-#ef projects():
-#   return render_template('projects.html')
+@app.route('/projects')
+def projects():
+  return render_template('projects.html')
 
-#app.route('/contact')
-#ef contact():
-#   return render_template('contact.html')
+@app.route('/contact')
+def contact():
+   return render_template('contact.html')
 
-#app.route('/tableau-projects')
-#ef tableau_projects():
-#   return render_template('tableau-projects.html')
+@app.route('/tableau-projects')
+def tableau_projects():
+   return render_template('tableau-projects.html')
 
-#app.route('/data-projects')
-#ef data_projects():
-#   return render_template('data-projects.html')
+@app.route('/data-projects')
+def data_projects():
+   return render_template('data-projects.html')
 
-#app.route('/python-projects')
-#ef python_projects():
-#   return render_template('python-projects.html')
+@app.route('/python-projects')
+def python_projects():
+   return render_template('python-projects.html')
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
