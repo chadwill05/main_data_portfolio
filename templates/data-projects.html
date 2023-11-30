@@ -34,19 +34,14 @@
         </div>
     </nav>
 
-    <main class="flex-shrink-0">
-        <!-- Page Content-->
-        <div class="container px-5 my-5">
-            <div class="text-center mb-5">
-                <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Data Projects</span></h1>
-            </div>
-            <!-- Projects Section -->
-            <!-- Add project details here -->
-            <!-- Space Mission Analysis Project Card -->
-    <div class="row gx-5 justify-content-center">
+ <main class="flex-shrink-0">
+     <div class="container">
+    <!-- Projects for Page 1 -->
+    <div id="projectsPage1" class="row gx-5 justify-content-center">
+        <!-- Space Mission Analysis Project -->
         <div class="col-lg-4 mb-5">
             <div class="card h-100">
-                <img class="card-img-top" src="static/assets/img/space_mission_pic.jpeg" alt="Space Mission Analysis">
+                <img class="card-img-top" src="{{ url_for('static', filename='assets/img/space_mission_pic.jpeg') }}" alt="Space Mission Analysis">
                 <div class="card-body">
                     <h4 class="card-title">Space Mission Analysis</h4>
                     <p class="card-text">An in-depth analysis of various space missions conducted over the years.</p>
@@ -57,7 +52,7 @@
         <!-- IMDB Movie Analysis Project -->
         <div class="col-lg-4 mb-5">
             <div class="card h-100">
-                <img class="card-img-top" src="static/assets/img/imdb_image.jpeg" alt="IMDB Movie Analysis">
+                <img class="card-img-top" src="{{ url_for('static', filename='assets/img/imdb_image.jpeg') }}" alt="IMDB Movie Analysis">
                 <div class="card-body">
                     <h4 class="card-title">IMDB Movie Analysis</h4>
                     <p class="card-text">A comprehensive analysis of movie ratings and trends on IMDB.</p>
@@ -68,18 +63,73 @@
         <!-- Google Trends and Data Visualization Project -->
         <div class="col-lg-4 mb-5">
             <div class="card h-100">
-                <img class="card-img-top" src="static/assets/img/Google-Trends.png" alt="Google Trends and Data Visualization">
+                <img class="card-img-top" src="{{ url_for('static', filename='assets/img/Google-Trends.png') }}" alt="Google Trends and Data Visualization">
                 <div class="card-body">
                     <h4 class="card-title">Google Trends and Data Visualization</h4>
                     <p class="card-text">Exploration of Google Trends data with insightful visualizations.</p>
                     <a href="https://github.com/chadwill05/Google-Trends-and-Data-Visualization" class="btn btn-primary">View Project</a>
                 </div>
             </div>
+        </div>
+    </div>
 
+    <!-- Projects for Page 2, initially hidden -->
+    <div id="projectsPage2" class="row gx-5 justify-content-center" style="display:none;">
+        <!-- Google Play Store App Analytics Project -->
+        <div class="col-lg-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="{{ url_for('static', filename='assets/img/google_play_img.jpeg') }}" alt="Google Play Store App Analytics">
+                <div class="card-body">
+                    <h4 class="card-title">Google Play Store App Analytics</h4>
+                    <p class="card-text">Comprehensive analysis of the Google Play Store's app ecosystem, focusing on user ratings, trends, and developer strategies.</p>
+                    <a href="https://github.com/chadwill05/Google-Play-Store-App-Analytics" class="btn btn-primary">View Project</a>
+                </div>
             </div>
         </div>
+        <!-- More projects for Page 2 can be added here -->
+        <!-- Programming Languages Analysis Project -->
+        <div class="col-lg-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="{{ url_for('static', filename='assets/img/program_lang.jpeg') }}" alt="Programming Languages Analysis">
+                <div class="card-body">
+                    <h4 class="card-title">Programming Languages Analysis</h4>
+                    <p class="card-text">A detailed analysis of various programming languages and their popularity over time.</p>
+                    <a href="https://github.com/chadwill05/programming_languages_analysis/blob/main/Programming_Languages_analysis.ipynb" class="btn btn-primary">View Project</a>
+                </div>
+            </div>
         </div>
-    </main>
+
+        <!-- Lego Analysis Project -->
+        <div class="col-lg-4 mb-5">
+            <div class="card h-100">
+                <img class="card-img-top" src="{{ url_for('static', filename='assets/img/legos.png') }}" alt="Lego Analysis">
+                <div class="card-body">
+                    <h4 class="card-title">Lego Analysis</h4>
+                    <p class="card-text">An insightful analysis of Lego sets, exploring trends and patterns in the Lego universe.</p>
+                    <a href="https://github.com/chadwill05/lego-analysis/blob/main/Official_Lego_Analysis.ipynb" class="btn btn-primary">View Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pagination Buttons -->
+        <div class="pagination-buttons text-center mt-4">
+            <button class="btn btn-outline-primary" onclick="showPage(1)">1</button>
+            <button class="btn btn-outline-primary" onclick="showPage(2)">2</button>
+        </div>
+    </div>
+</main>
+
+<script>
+    function showPage(pageNumber) {
+        var page1 = document.getElementById('projectsPage1');
+        var page2 = document.getElementById('projectsPage2');
+
+        page1.style.display = (pageNumber === 1) ? 'block' : 'none';
+        page2.style.display = (pageNumber === 2) ? 'block' : 'none';
+    }
+</script>
+
 
     <!-- Footer (include from separate file) -->
     {% include 'footer2.html' %}

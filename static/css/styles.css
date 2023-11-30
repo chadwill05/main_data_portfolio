@@ -11762,3 +11762,10 @@ html {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
+.project-card {
+    margin-bottom: 30px; /* Adjust as needed */
+}
+
+.pagination-buttons button {
+    margin: 0 5px;
+}
