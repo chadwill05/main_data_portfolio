@@ -98,12 +98,14 @@
                 <div class="text-center mb-5">
                     <h2 class="display-5 fw-bolder">Chess Puzzle</h2>
                     <p class="lead fw-normal">Take a break! Enjoy a daily chess puzzle!</p>
+                    <button class="btn btn-primary" onclick="document.getElementById('chessIframe').style.display='block'; this.style.display='none';">Play Chess Puzzle</button>
                 </div>
                 <div class="d-flex justify-content-center">
-                    <iframe style="width: 100%; max-width: 350px; height: 490px;" src="https://www.chess.com/daily_puzzle" frameborder="0"></iframe>
+                    <iframe id="chessIframe" style="width: 100%; max-width: 350px; height: 490px; display: none;" src="https://www.chess.com/daily_puzzle" frameborder="0"></iframe>
                 </div>
             </div>
         </section>
+
 
 
     </main>
