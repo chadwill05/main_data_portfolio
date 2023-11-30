@@ -92,19 +92,20 @@
                 </div>
             </div>
         </section>
-        <!-- Games Section -->
+        <!-- Chess Game Section -->
         <section class="py-5">
             <div class="container px-5">
                 <div class="text-center mb-5">
-                    <h2 class="display-5 fw-bolder">Games</h2>
-                    <p class="lead fw-normal">Relax! Stay a while and play a game!</p>
-                    <button class="btn btn-primary" onclick="document.getElementById('gameIframe').style.display='block';this.style.display='none';">Relax! Stay a while and play a game!</button>
+                    <h2 class="display-5 fw-bolder">Chess Puzzle</h2>
+                    <p class="lead fw-normal">Take a break! Enjoy a daily chess puzzle!</p>
                 </div>
                 <div class="d-flex justify-content-center">
-                    <iframe id="gameIframe" width="560" height="315" allow="fullscreen; autoplay; encrypted-media" src="https://games.construct.net/253/latest" frameborder="0" allowfullscreen="true" msallowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" allowpaymentrequest="false" referrerpolicy="unsafe-url" sandbox="allow-same-origin allow-forms allow-scripts allow-pointer-lock allow-orientation-lock allow-popups" scrolling="no" style="display:none;"></iframe>
+                    <iframe style="width: 100%; max-width: 350px; height: 490px;" src="https://www.chess.com/daily_puzzle" frameborder="0"></iframe>
                 </div>
             </div>
         </section>
+
+
     </main>
     <!-- Footer (include from separate file) -->
     {% include 'footer.html' %}
