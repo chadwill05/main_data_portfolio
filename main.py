@@ -8,6 +8,8 @@ from flask_sqlalchemy import SQLAlchemy
 from functools import wraps
 from werkzeug.security import generate_password_hash, check_password_hash
 from sqlalchemy.orm import relationship
+import smtplib
+import requests
 
 import os
 #
@@ -53,6 +55,7 @@ def data_projects():
 @app.route('/python-projects')
 def python_projects():
    return render_template('python-projects.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
