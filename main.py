@@ -40,9 +40,9 @@ def resume():
 def projects():
   return render_template('projects.html')
 
-@app.route('/contact')
+@app.route('/contact_me')
 def contact():
-   return render_template('contact.html')
+   return render_template('contact_me.html')
 
 @app.route('/tableau-projects')
 def tableau_projects():
